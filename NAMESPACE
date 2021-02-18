@@ -1,0 +1,7 @@
+useDynLib(optbin, .registration=TRUE)
+importFrom(graphics, plot, lines, axis, title, abline, hist, strheight)
+S3method(hist, optbin)
+S3method(plot, optbin)
+S3method(print, optbin)
+S3method(summary, optbin)
+export(optbin, assign.optbin, hist.optbin)
