@@ -30,7 +30,7 @@ void R_init_optbin(DllInfo *info) {
 
 /* triangular indexing - see calc_se for a description */
 
-/* matrix index for bin between stpt and endpt (incl.) of npt total */
+/* matrix index for bin between stpt and endpt (incl., > stpt) of npt total */
 #define BIN_TOIND(stpt, endpt, npt)                                \
 	((((npt) - 1 - (stpt)) * ((npt) - (stpt)) / 2) - ((npt) - 1 - (endpt)) - 1)
 
@@ -155,7 +155,7 @@ static void optbin_cached(int nbin, double *data, size_t nval, int mse,
 	allocate_optbin(nbin, nval, binends, binse, &endpt, &basese, &currse);
 
 	/* Seed with a single bin from each starting point to the end. */
-	for (s=0; s<nval; s++) {
+	for (s=0; s<(nval-1); s++) {
 		seind = BIN_TOIND(s, nval-1, nval);
 		basese[s] = se[seind];
 		endpt[s][nbin-1] = nval - 1;
