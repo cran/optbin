@@ -1,5 +1,6 @@
 
 Version History
 
+v1.2 [13 Sep 22] -  bugfix: missing UNPROTECT in top C_optbin
 v1.1 [ 2 Mar 21] -  bugfix: illegal array index generated seeding cache
 v1.0 [10 Feb 21] -  initial release

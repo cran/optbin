@@ -98,7 +98,9 @@ SEXP C_optbin(SEXP data, SEXP numbins, SEXP usemse, SEXP cachemem) {
 	}
 
 	res = PROTECT(allocVector(VECSXP, 8));
-	return set_results(numbins, data, mse, endpts, binse, minse, res);
+	res = set_results(numbins, data, mse, endpts, binse, minse, res);
+	UNPROTECT(1);
+	return res;
 }
 
 
@@ -607,7 +609,7 @@ static SEXP set_results(SEXP numbins, SEXP data, int mse, size_t *endpts,
 	SET_STRING_ELT(class, 0, mkChar("optbin"));
 	classgets(res, class);
 
-	UNPROTECT(7);
+	UNPROTECT(6);
 	return res;
 }
 
