@@ -99,6 +99,9 @@ SEXP C_optbin(SEXP data, SEXP numbins, SEXP usemse, SEXP cachemem) {
 
 	res = PROTECT(allocVector(VECSXP, 8));
 	res = set_results(numbins, data, mse, endpts, binse, minse, res);
+	/* Bugfix 13 Sep 22: Originally unprotected in set_results, but automated
+	   checks complain about mis-match in this function.  Decrease UNPROTECT
+	   in set_results. */
 	UNPROTECT(1);
 	return res;
 }
@@ -485,7 +488,7 @@ static void allocate_optbin(int nbin, size_t nval, size_t **binends,
 	for (i=0; i<nval; i++) {
 		(*endpt)[i] = (size_t *) R_alloc(nbin, sizeof(***endpt));
 		if (NULL == (*endpt)[i]) {
-			error("allocation of endpoints for bin %d failed", i);
+			error("allocation of endpoints for bin %ld failed", (long) i);
 		}
 	}
 
