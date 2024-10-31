@@ -327,7 +327,7 @@ static void cache_se(double *data, size_t nval, int mse, double **se) {
 	sum = NULL;
 	sumsq = NULL;
 
-	Free(*se);
+	R_Free(*se);
 
 	/* Allocating a square array for se is fastest - simple indexing - but
 	   we only fill the upper triangle so half the memory is wasted.  The 
@@ -388,8 +388,8 @@ static void cache_se(double *data, size_t nval, int mse, double **se) {
 static void calc_sums(double *data, size_t nval, double **sum, double **sumsq) {
 	size_t i;
 
-	Free(*sum);
-	Free(*sumsq);
+	R_Free(*sum);
+	R_Free(*sumsq);
 
 	*sum = (double *) R_alloc(nval+1, sizeof(**sum));
 	if (NULL == *sum) {

@@ -1,6 +1,7 @@
 
 Version History
 
+v1.4 [ 4 Oct 24] -  comply with _R_USE_STRICT_HEADERS change for R 4.5.0
 v1.3 [ 4 Dec 23] -  bugfix: incorrect format conversion/length specifier
 v1.2 [13 Sep 22] -  bugfix: UNPROTECT in top C_optbin buried in set_results
 v1.1 [ 2 Mar 21] -  bugfix: illegal array index generated seeding cache

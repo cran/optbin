@@ -1,5 +1,5 @@
-aca2bf792a03ed43e3f920b1f27c78e7 *ChangeLog
-798b43830a70b1dcc67653360a349bd0 *DESCRIPTION
+cfeb1b0c8e6b8c1b86739110dbef8bfd *ChangeLog
+c6537a9bc11cbafd89ddbfbd6b21fe0e *DESCRIPTION
 45043a858ee24944316336624c48b25c *LICENSE
 9c838d83efeae3e791bf492438f1db67 *NAMESPACE
 4f169f1d438cf2be6902cee10b07cd32 *R/optbin.R
@@ -10,7 +10,7 @@ cfab474abc884e23cd504ccb5059d580 *man/hist_optbin.Rd
 a3adc2a7f133980f5cc8cda7925d8f1a *man/plot_optbin.Rd
 4c2ee98f762dfa51172a2d38f4600b14 *man/print_optbin.Rd
 6f17ec46f16c9849e59308b89be8ddee *man/summary_optbin.Rd
-6a28887b91d0e035a0b23116d3fa83a9 *src/optbin.c
-2674d3b419eefd5926750cd8c3a0d154 *src/optbin.h
+e37abb85993c4022bea02110ec8d70e9 *src/optbin.c
+be9b8a03b6c3a0ea917793de7d00b7b0 *src/optbin.h
 2332a541509f6367244ab89ac671566b *tests/bist_optbin.R
 17bcbd4ee6db37ccdbd9bcaac2dfc3b2 *tests/bist_optbin.Rout.save
